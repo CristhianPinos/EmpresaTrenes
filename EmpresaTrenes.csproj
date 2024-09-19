@@ -82,6 +82,11 @@
     <Compile Include="Models\TrenesModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SistemaTrenesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -91,6 +96,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SistemaTrenesDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaTrenesDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaTrenesDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Views\Dashboard.cs">
@@ -179,6 +189,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reportes\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="SistemaTrenesDataSet.xsc">
       <DependentUpon>SistemaTrenesDataSet.xsd</DependentUpon>
     </None>
@@ -200,6 +221,17 @@
     </None>
     <None Include="SistemaTrenesDataSet1.xss">
       <DependentUpon>SistemaTrenesDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaTrenesDataSet2.xsc">
+      <DependentUpon>SistemaTrenesDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaTrenesDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaTrenesDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaTrenesDataSet2.xss">
+      <DependentUpon>SistemaTrenesDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

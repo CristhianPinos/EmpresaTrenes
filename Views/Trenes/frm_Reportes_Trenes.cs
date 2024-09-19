@@ -15,7 +15,6 @@ namespace EmpresaTrenes.Views.Trenes
 {
     public partial class frm_Reportes_Trenes : Form
     {
-        TrenesController _trenesController = new TrenesController();
         public frm_Reportes_Trenes()
         {
             InitializeComponent();
@@ -23,16 +22,11 @@ namespace EmpresaTrenes.Views.Trenes
 
         private void frm_Reportes_Trenes_Load(object sender, EventArgs e)
         {
-            Application.EnableVisualStyles();
-            reportViewer1.LocalReport.ReportEmbeddedResource = "Login.Reportes.Trenes.rdlc";
+            // TODO: esta línea de código carga datos en la tabla 'dataSet1.Trenes' Puede moverla o quitarla según sea necesario.
+            this.trenesTableAdapter.Fill(this.dataSet1.Trenes);
 
-            List<TrenesModel> trenesModel = _trenesController.ObtenerTodos();
-            ReportDataSource fuentedatos = new ReportDataSource("DataSet1", trenesModel);
 
-            reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(fuentedatos);
-
-            reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
         }
     }
 }
